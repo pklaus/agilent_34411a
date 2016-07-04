@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='agilent_34411A',
       version = '0.2.0',
@@ -11,7 +11,11 @@ setup(name='agilent_34411A',
       url = '',
       license = 'GPL',
       packages = ['agilent_34411A'],
-      scripts = ['scripts/agilent_34411A_cli'],
+      entry_points = {
+        'console_scripts': [
+          'agilent_34411A_cli = agilent_34411A.cli:main',
+        ],
+      },
       zip_safe = True,
       platforms = 'any',
       keywords = 'Agilent 34411A DMM',

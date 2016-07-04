@@ -45,7 +45,7 @@ def main():
     i = 1
     while True:
         if last_time + sampling_interval < clock():
-            logger.warning("The sampling time doesn't currently allow you at to measure at the desired frequency.")
+            logger.warning("The sampling time doesn't currently allow you to measure at the desired frequency.")
         while clock() - last_time < sampling_interval:
             time.sleep(0.005)
         i += 1

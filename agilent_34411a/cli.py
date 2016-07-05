@@ -5,7 +5,7 @@ import time
 import sys
 import logging
 
-from agilent_34411A import Agilent_34411A
+from agilent_34411a import Agilent_34411A
 
 try:
     clock = time.perf_counter

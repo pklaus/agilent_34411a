@@ -27,7 +27,7 @@ Check what's possible by running `agilent_34411a_cli --help`.
 You can, however, also write your own Python script to implement your own measurement tasks:
 
 ````python
-from agilent_34411A import Agilent_34411A
+from agilent_34411a import Agilent_34411A
 
 a = Agilent_34411A('192.168.0.10')
 print("Connected to the following device: {}".format(a.idn))

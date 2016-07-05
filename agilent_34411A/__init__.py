@@ -19,7 +19,7 @@ class Agilent_34411A(object):
             raise Agilent34411AConnectionException("Connection to host {} could not be established: {}".format(self.host, e))
 
     def query_cmd(self, cmd):
-        cmd_line = cmd + Agilent34411A.EOL
+        cmd_line = cmd + Agilent_34411A.EOL
         self.s.sendall(cmd_line.encode('ascii'))
         return self.s.recv(1024).decode('ascii').strip()
 

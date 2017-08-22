@@ -20,7 +20,34 @@ I also added some more transformation functions:
     --output-format '{:.03f} °C' \
     --interval 0.9 --avg-samples 1
 
-Check what's possible by running `agilent_34411a_cli --help`.
+Check what's possible by running `agilent_34411a_cli --help`:
+
+    $ agilent_34411a_cli -h
+    usage: agilent_34411a_cli [-h] [--port PORT] [--interval INTERVAL]
+                              [--avg-samples AVG_SAMPLES]
+                              [--value-scaling VALUE_SCALING]
+                              [--output-format OUTPUT_FORMAT]
+                              [--apply-function {None,PT100}]
+                              host
+    
+    Process some integers.
+    
+    positional arguments:
+      host                  Agilent 34411A to connect to
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --port PORT           TCP Port to connect to
+      --interval INTERVAL   Interval in s between printing the value
+      --avg-samples AVG_SAMPLES
+                            Number of samples to to capture for averaging
+      --value-scaling VALUE_SCALING
+                            A factor to scale the measured value with
+      --output-format OUTPUT_FORMAT
+                            Format for printing the output
+      --apply-function {None,PT100}
+                            A function to apply to the output value (after
+                            scaling)
 
 You can, however, also write your own Python script to implement your own measurement tasks:
 

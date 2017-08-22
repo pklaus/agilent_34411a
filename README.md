@@ -34,3 +34,24 @@ while True:
     value = a.read()
     print("{}".format(value))
 ```
+
+#### Resources
+
+##### Connecting via VXI-11
+
+Besides connecting directly to port 5025 via TCP/IP, the
+DMM also understands the RPC protocol VXI-11.
+
+To make this work, you don't need this package (*agilent_34411A*).
+Instead, install the Python bindings for VXI-11:
+[python-vxi11](https://github.com/python-ivi/python-vxi11)
+and you can connect to the device with the following Python code:
+
+```python
+import vxi11
+
+instr =  vxi11.Instrument("192.168.0.207")
+
+print(instr.ask("*IDN?"))
+print("{:.05f}".format(float(instr.ask("READ?"))))
+```

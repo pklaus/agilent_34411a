@@ -5,7 +5,7 @@ This Python package makes it easy to communicate with the Agilent 34411A in Pyth
 
 #### Installation
 
-    pip install https://github.com/pklaus/agilent_34411a/archive/master.zip
+    pip install --upgrade https://github.com/pklaus/agilent_34411a/archive/master.zip
 
 #### Usage
 
@@ -69,7 +69,7 @@ while True:
 Besides connecting directly to port 5025 via TCP/IP, the
 DMM also understands the RPC protocol VXI-11.
 
-To make this work, you don't need this package (*agilent_34411a*).
+To make this work, you don't need this package (`agilent_34411a`).
 Instead, install the Python bindings for VXI-11:
 [python-vxi11](https://github.com/python-ivi/python-vxi11)
 and you can connect to the device with the following Python code:

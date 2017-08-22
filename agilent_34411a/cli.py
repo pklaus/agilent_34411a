@@ -32,7 +32,7 @@ def main():
     parser.add_argument('--interval', type=float, default=0.3, help='Interval in s between printing the value')
     parser.add_argument('--avg-samples', type=int, default=1, help='Number of samples to to capture for averaging')
     parser.add_argument('--value-scaling', type=float, default=1.0, help='A factor to scale the measured value with')
-    parser.add_argument('--output-format', default="{:.03f}", help='Format for printing the output')
+    parser.add_argument('--output-format', default="{:.05f}", help='Format for printing the output')
     parser.add_argument('--apply-function', choices=('None', 'PT100'), help='A function to apply to the output value (after scaling)')
     args = parser.parse_args()
 
